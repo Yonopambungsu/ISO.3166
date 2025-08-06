@@ -1,4 +1,3 @@
-# ISOLib-3166-1-2
-ISO-3166 Alpha 1, Alpha 2 Country and Subdivisions
+ISO-3166 Alpha 2, Alpha 3
 
 Visit : https://floxentech.com
