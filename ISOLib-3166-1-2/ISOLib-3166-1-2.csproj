@@ -1,19 +1,36 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <RootNamespace>ISOLib_3166_1_2</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+	  <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+	  <!-- NuGet Metadata -->
+	  <PackageId>ISOLib_3166_1_2</PackageId>
+	  <Version>1.1.3</Version>
+	  <Authors>Karyono</Authors>
+	  <Company>FloxenTech.com</Company>
+	  <Description>Library ISO 3166-1 and 3166-2 Country and Subdivision for .Net 7</Description>
+	  <PackageLicenseExpression>MIT</PackageLicenseExpression>
+	  <RepositoryUrl>https://github.com/Yonopambungsu/ISOLib-3166-1-2</RepositoryUrl>
+	  <PackageProjectUrl>https://github.com/Yonopambungsu/ISOLib-3166-1-2</PackageProjectUrl>
+	  <RepositoryType>git</RepositoryType>
+	  <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="countries.json" />
+	  <None Include="README.md" Pack="true" PackagePath=""/>
     <None Remove="subdivisions.json" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="countries.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="README.md">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="subdivisions.json">
